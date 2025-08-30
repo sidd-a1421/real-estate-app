@@ -62,11 +62,11 @@ export async function getCurrentUser() {
         const response = await account.get();
 
         if(response.$id){
-            const userAvatar = avatar.getInitials(response.name);
+            const userAvatar = `https://fra.cloud.appwrite.io/v1/avatars/initials?name=${encodeURIComponent(response.name || response.email)}`;
 
             return {
                 ...response,
-                avatar: userAvatar.toString()
+                avatar: userAvatar
             }
         }
     } catch (error) {

@@ -52,13 +52,13 @@ const Auth = () => {
             <Text className="text-primary-300">Your Ideal Home</Text>
           </Text>
 
-          <Text className="text-lg font-rubik text-black-200 text-center mt-12">
+          <Text className="text-lg font-rubik text-black-200 text-center mt-7">
             Login to Real Scout with Google
           </Text>
 
           <TouchableOpacity
             onPress={handleLogin}
-            className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5"
+            className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-1"
           >
             <View className="flex flex-row items-center justify-center">
               <Image
