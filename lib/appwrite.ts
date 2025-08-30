@@ -1,4 +1,4 @@
-import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite'
+import { Account, AppwriteException, Avatars, Client, OAuthProvider } from 'react-native-appwrite'
 import * as Linking from 'expo-linking'
 import {openAuthSessionAsync} from 'expo-web-browser';
 
@@ -70,6 +70,11 @@ export async function getCurrentUser() {
             }
         }
     } catch (error) {
+        if (error instanceof AppwriteException) {
+            if (error.code === 401 || error.message.includes("missing scopes")) {
+            return null;
+            }
+        }
         console.error(error);
         return null;
     }
