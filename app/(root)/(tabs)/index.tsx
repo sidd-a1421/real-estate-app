@@ -1,6 +1,6 @@
 import { Card, FetureCard, Filters, NoResult, Search } from "@/components";
 import icons from "@/constants/icons";
-import { databases, getLatestProperties, getproperties } from "@/lib/appwrite";
+import { getLatestProperties, getproperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/global-provider";
 import { useAppwrite } from "@/lib/useAppwrite";
 import { router, useLocalSearchParams } from "expo-router";
